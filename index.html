@@ -1,461 +1,1401 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manorama Arts & Hastgiri | Custom Statues & Sculptures</title>
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <meta name="description"
+          content="Manorama Arts & Hastgiri - Custom Fiberglass Statues, Religious Idols and Sculptures.">
 
-  <style>
-    .hero-section {
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.60)),
-        url('shivaji maharaj.HEIC')
-        center 35% / cover no-repeat;
-      padding: 90px 0 70px;
-    }
+    <meta name="theme-color" content="#212529">
 
-    .gallery-img {
-      height: 240px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
+    <title>Manorama Arts & Hastgiri | Custom Statues & Sculptures</title>
 
-    .gallery-card {
-      border-radius: 8px;
-    }
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-    .gallery-card:hover .gallery-img {
-      transform: scale(1.05);
-    }
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        rel="stylesheet">
 
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 75px;
-      right: 20px;
-      z-index: 1000;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      animation: pulse 2s infinite;
-    }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-      100% { transform: scale(1); }
-    }
+    <style>
 
-    .action-bar {
-      position: sticky;
-      bottom: 0;
-      z-index: 999;
-    }
+        /* ==============================
+           GENERAL SETTINGS
+        ============================== */
 
-    /* Workshop Location */
-    .location-section {
-      background: #ffffff;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    .location-card {
-      border: 1px solid #eeeeee;
-      border-radius: 12px;
-      padding: 25px;
-      background: #ffffff;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .location-icon {
-      font-size: 38px;
-      color: #dc3545;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
 
-    .address-link {
-      color: #333;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
 
-    .address-link:hover {
-      color: #dc3545;
-      text-decoration: underline;
-    }
+        /* ==============================
+           NAVIGATION
+        ============================== */
 
-    @media (max-width: 576px) {
-      .hero-section {
-        padding: 60px 0 45px;
-        background-position: center;
-      }
+        .navbar {
+            background: #ffffff;
+        }
 
-      .gallery-img {
-        height: 190px;
-      }
+        .navbar-brand {
+            font-size: 18px;
+            font-weight: 800;
+            white-space: normal;
+        }
 
-      .floating-whatsapp {
-        width: 52px;
-        height: 52px;
-        font-size: 27px;
-        right: 12px;
-        bottom: 85px;
-      }
 
-      .location-card {
-        padding: 18px;
-      }
-    }
-  </style>
+        /* ==============================
+           HERO SECTION
+        ============================== */
+
+        .hero-section {
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.65)
+                ),
+                url('shivaji maharaj.jpg')
+                center 35% / cover no-repeat;
+
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-section h1 {
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero-section p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+        }
+
+
+        /* ==============================
+           HIGHLIGHT STRIP
+        ============================== */
+
+        .highlight-strip {
+            background: #ffc107;
+            color: #212529;
+            padding: 15px 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+        /* ==============================
+           GALLERY SECTION
+        ============================== */
+
+        .gallery-section {
+            padding: 55px 0;
+            background: #f8f9fa;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.35s ease;
+        }
+
+        .gallery-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            background: white;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.04);
+        }
+
+        .gallery-card .card-body {
+            padding: 12px 8px;
+        }
+
+        .gallery-title {
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .view-all-btn {
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           ALL PHOTOS MODAL
+        ============================== */
+
+        #allPhotosModal .modal-dialog {
+            width: calc(100% - 30px);
+            max-width: 1100px;
+            height: 90vh;
+            height: 90dvh;
+            margin: 5vh auto;
+            margin: 5dvh auto;
+        }
+
+        #allPhotosModal .modal-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: none;
+            border-radius: 14px;
+            background: #ffffff;
+        }
+
+
+        /* MODAL HEADER */
+
+        #allPhotosModal .modal-header {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eeeeee;
+            z-index: 5;
+        }
+
+        #allPhotosModal .modal-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #allPhotosModal .modal-header .btn-close {
+            margin: 0 0 0 auto;
+            padding: 12px;
+            flex-shrink: 0;
+            opacity: 1;
+        }
+
+
+        /* MODAL BODY - SCROLL */
+
+        #allPhotosModal .modal-body {
+            flex: 1 1 auto;
+            min-height: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 20px;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+        }
+
+        #allPhotosModal .modal-body::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        #allPhotosModal .modal-body::-webkit-scrollbar-thumb {
+            background: #aaaaaa;
+            border-radius: 10px;
+        }
+
+
+        /* MODAL FOOTER */
+
+        #allPhotosModal .modal-footer {
+            flex: 0 0 auto;
+            padding: 10px 15px;
+            background: #ffffff;
+            border-top: 1px solid #eeeeee;
+        }
+
+
+        /* ==============================
+           HOW TO ORDER
+        ============================== */
+
+        .order-section {
+            padding: 40px 0;
+            background: #ffffff;
+        }
+
+        .order-card {
+            padding: 20px 8px;
+            height: 100%;
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+
+        .order-card i {
+            font-size: 32px;
+        }
+
+
+        /* ==============================
+           LOCATION
+        ============================== */
+
+        .location-section {
+            padding: 55px 0;
+            background: #ffffff;
+        }
+
+        .location-card {
+            background: #ffffff;
+            padding: 30px 20px;
+            border: 1px solid #eeeeee;
+            border-radius: 14px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+            text-align: center;
+        }
+
+        .location-icon {
+            font-size: 42px;
+            color: #dc3545;
+        }
+
+        .address-link {
+            text-decoration: none;
+            color: #555555;
+        }
+
+        .address-link:hover {
+            color: #dc3545;
+            text-decoration: underline;
+        }
+
+
+        /* ==============================
+           CONTACT SECTION
+        ============================== */
+
+        .contact-section {
+            background: #212529;
+            color: white;
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+
+        /* ==============================
+           FLOATING WHATSAPP
+        ============================== */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 18px;
+            bottom: 85px;
+            width: 58px;
+            height: 58px;
+            z-index: 1040;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* ==============================
+           BOTTOM ACTION BAR
+        ============================== */
+
+        .action-bar {
+            position: sticky;
+            bottom: 0;
+            z-index: 1030;
+            background: #212529;
+            padding: 9px;
+        }
+
+
+        /* ==============================
+           SMALL MOBILE
+        ============================== */
+
+        @media (max-width: 360px) {
+
+            .navbar-brand {
+                font-size: 14px;
+            }
+
+            .hero-section {
+                min-height: 350px;
+                padding: 50px 12px;
+            }
+
+            .hero-section h1 {
+                font-size: 28px;
+            }
+
+            .gallery-img {
+                height: 140px;
+            }
+
+            #allPhotosModal .modal-dialog {
+                width: calc(100% - 10px);
+                height: 92vh;
+                height: 92dvh;
+                margin: 4vh auto;
+                margin: 4dvh auto;
+            }
+
+            #allPhotosModal .modal-body {
+                padding: 8px;
+            }
+
+            #allPhotosModal .modal-header {
+                padding: 10px;
+            }
+
+            #allPhotosModal .modal-title {
+                font-size: 16px;
+            }
+
+        }
+
+
+        /* ==============================
+           MOBILE PHONES
+        ============================== */
+
+        @media (min-width: 361px) and (max-width: 576px) {
+
+            .hero-section {
+                min-height: 370px;
+                padding: 55px 15px;
+            }
+
+            .hero-section h1 {
+                font-size: 32px;
+            }
+
+            .gallery-img {
+                height: 180px;
+            }
+
+            #allPhotosModal .modal-dialog {
+                width: calc(100% - 16px);
+                height: 92vh;
+                height: 92dvh;
+                margin: 4vh auto;
+                margin: 4dvh auto;
+            }
+
+            #allPhotosModal .modal-header {
+                padding: 12px 14px;
+            }
+
+            #allPhotosModal .modal-body {
+                padding: 10px;
+            }
+
+        }
+
+
+        /* ==============================
+           TABLETS
+        ============================== */
+
+        @media (min-width: 577px) and (max-width: 991px) {
+
+            .gallery-img {
+                height: 210px;
+            }
+
+            #allPhotosModal .modal-dialog {
+                width: calc(100% - 30px);
+                height: 90vh;
+            }
+
+        }
+
+
+        /* ==============================
+           DESKTOP
+        ============================== */
+
+        @media (min-width: 992px) {
+
+            .hero-section {
+                min-height: 480px;
+            }
+
+            .gallery-img {
+                height: 250px;
+            }
+
+        }
+
+
+        /* ==============================
+           REDUCE ANIMATION
+        ============================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+
+        }
+
+    </style>
+
 </head>
 
-<body class="bg-light">
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/919284601010?text=Hello%2C%20I%20want%20a%20price%20quote%20for%20a%20custom%20fiberglass%20statue."
-     class="btn btn-success floating-whatsapp text-white"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="WhatsApp Us">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+<body>
 
-  <!-- Header -->
-  <nav class="navbar navbar-light bg-white py-3 shadow-sm">
-    <div class="container justify-content-between">
-      <a class="navbar-brand fw-bold text-uppercase fs-6 text-dark" href="#">
-        <i class="bi bi-palette-fill text-warning me-2"></i>
-        Manorama Arts & Hastgiri
-      </a>
 
-      <a href="tel:+919284601010" class="btn btn-warning btn-sm fw-bold">
-        <i class="bi bi-telephone-fill me-1"></i> Call Workshop
-      </a>
-    </div>
-  </nav>
+    <!-- ==============================
+         NAVIGATION
+    ============================== -->
 
-  <!-- Hero Banner -->
-  <header class="hero-section text-white text-center">
-    <div class="container">
+    <nav class="navbar navbar-light shadow-sm py-3">
 
-      <span class="badge bg-warning text-dark px-3 py-2 mb-3 fs-6 fw-bold">
-        Manorama Arts & Hastgiri
-      </span>
+        <div class="container d-flex justify-content-between align-items-center">
 
-      <h1 class="display-5 fw-bold mb-3">
-        Bringing Art &<br>Tradition to Life
-      </h1>
+            <a class="navbar-brand text-dark" href="#">
 
-      <p class="fs-6 text-light mb-4">
-        Custom fiberglass statues, religious idols, historical personalities
-        and unique sculptures made to your requirements.
-      </p>
+                <i class="bi bi-palette-fill text-warning me-2"></i>
 
-      <div class="d-flex justify-content-center gap-2 flex-wrap">
+                Manorama Arts & Hastgiri
 
-        <a href="https://wa.me/919284601010?text=Hello%2C%20I%20want%20a%20custom%20statue."
-           class="btn btn-success btn-lg px-4 py-2 fs-6 fw-bold"
-           target="_blank"
-           rel="noopener noreferrer">
-          <i class="bi bi-whatsapp me-2 fs-5"></i> WhatsApp Enquiry
-        </a>
+            </a>
 
-        <a href="tel:+919284601010"
-           class="btn btn-light btn-lg px-4 py-2 fs-6 fw-bold text-dark">
-          <i class="bi bi-telephone-fill me-2 text-primary fs-5"></i>
-          Call Workshop
-        </a>
 
-      </div>
-    </div>
-  </header>
+            <a href="tel:+919284601010"
+               class="btn btn-warning btn-sm fw-bold">
 
-  <!-- Quick Benefits -->
-  <section class="bg-warning py-3 text-dark text-center fw-bold small">
-    <div class="container">
-      <div class="row g-2">
-        <div class="col-4">☀️ Outdoor Options</div>
-        <div class="col-4">🎨 Custom Finishing</div>
-        <div class="col-4">🚚 Delivery Enquiries</div>
-      </div>
-    </div>
-  </section>
+                <i class="bi bi-telephone-fill me-1"></i>
+                Call Workshop
 
-  <!-- Statue Gallery -->
-  <section class="py-5">
-    <div class="container">
+            </a>
 
-      <div class="text-center mb-4">
-        <h2 class="fw-bold fs-3 mb-1">Our Fiberglass Creations</h2>
-        <p class="text-muted small m-0">
-          Explore different statue designs and sculpture categories
-        </p>
-      </div>
-
-      <div class="row g-3">
-        <div class="col-6 col-md-3">
-          <div class="card border-0 shadow-sm overflow-hidden gallery-card h-100">
-            <img src="Ram.jpg" class="gallery-img w-100" alt="Ram" loading="lazy">
-            <div class="card-body p-2 text-center bg-white">
-              <span class="fw-bold d-block small">Shri Ram</span>
-            </div>
-          </div>
         </div>
 
-        <div class="col-6 col-md-3">
-          <div class="card border-0 shadow-sm overflow-hidden gallery-card h-100">
-            <img src="statue.jpg" class="gallery-img w-100" alt="statue" loading="lazy">
-            <div class="card-body p-2 text-center bg-white">
-              <span class="fw-bold d-block small">statue</span>
-            </div>
-          </div>
-        </div>
+    </nav>
 
-        <div class="col-6 col-md-3">
-          <div class="card border-0 shadow-sm overflow-hidden gallery-card h-100">
-            <img src="maharaj.jpg" class="gallery-img w-100" alt="maharaj" loading="lazy">
-            <div class="card-body p-2 text-center bg-white">
-              <span class="fw-bold d-block small">Shankar Maharaj</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-6 col-md-3">
-          <div class="card border-0 shadow-sm overflow-hidden gallery-card h-100">
-            <img src="shivaji maharaj.jpg" class="gallery-img w-100" alt="shivaji maharaj" loading="lazy">
-            <div class="card-body p-2 text-center bg-white">
-              <span class="fw-bold d-block small">Chatrapati Shivaji Maharaj</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-6 col-md-3">
-          <div class="card border-0 shadow-sm overflow-hidden gallery-card h-100">
-            <img src="Swami samarth.jpg" class="gallery-img w-100" alt="Swami samarth" loading="lazy">
-            <div class="card-body p-2 text-center bg-white">
-              <span class="fw-bold d-block small">Swami Samarth</span>
-            </div>
-          </div>
-        </div>
+    <!-- ==============================
+         HERO SECTION
+    ============================== -->
 
-        <div class="col-6 col-md-3">
-          <div class="card border-0 shadow-sm overflow-hidden gallery-card h-100">
-            <img src="Mahadev.jpg" class="gallery-img w-100" alt="Mahadev" loading="lazy">
-            <div class="card-body p-2 text-center bg-white">
-              <span class="fw-bold d-block small">Mahadev</span>
-            </div>
-          </div>
-        </div>
+    <header class="hero-section">
 
-        <div class="col-6 col-md-3">
-          <div class="card border-0 shadow-sm overflow-hidden gallery-card h-100">
-            <img src="Nandi.jpg" class="gallery-img w-100" alt="Nandi" loading="lazy">
-            <div class="card-body p-2 text-center bg-white">
-              <span class="fw-bold d-block small">Nandi</span>
-            </div>
-          </div>
-        </div>
+        <div class="container">
 
-        <div class="col-6 col-md-3">
-          <div class="card border-0 shadow-sm overflow-hidden gallery-card h-100">
-            <img src="Hanuman.jpg" class="gallery-img w-100" alt="Hanuman" loading="lazy">
-            <div class="card-body p-2 text-center bg-white">
-              <span class="fw-bold d-block small">Lord Hanuman</span>
-            </div>
-          </div>
-        </div>
+            <span class="badge bg-warning text-dark px-3 py-2 mb-3">
 
-      </div>
-    </div>
-  </section>
+                MANORAMA ARTS & HASTGIRI
 
-  <!-- How to Order -->
-  <section class="py-4 bg-white border-top">
-    <div class="container text-center">
+            </span>
 
-      <h4 class="fw-bold mb-3 fs-5">How to Order</h4>
 
-      <div class="row g-2">
+            <h1 class="display-4 mb-3">
 
-        <div class="col-4">
-          <div class="p-3 border rounded bg-light h-100">
-            <i class="bi bi-whatsapp fs-2 text-success"></i>
-            <p class="fw-bold small mb-0 mt-1">1. Share Photo</p>
-          </div>
-        </div>
+                Bringing Art &<br>
+                Tradition to Life
 
-        <div class="col-4">
-          <div class="p-3 border rounded bg-light h-100">
-            <i class="bi bi-calculator-fill fs-2 text-warning"></i>
-            <p class="fw-bold small mb-0 mt-1">2. Get a Quote</p>
-          </div>
-        </div>
+            </h1>
 
-        <div class="col-4">
-          <div class="p-3 border rounded bg-light h-100">
-            <i class="bi bi-box-seam-fill fs-2 text-primary"></i>
-            <p class="fw-bold small mb-0 mt-1">3. Build Your Statue</p>
-          </div>
-        </div>
 
-      </div>
-    </div>
-  </section>
+            <p class="fs-6 text-light">
 
- <!-- Workshop Location -->
-<section class="location-section py-5 border-top">
-  <div class="container">
+                Custom fiberglass statues, religious idols,
+                historical personalities and unique sculptures
+                made according to your requirements.
 
-    <div class="text-center mb-4">
-      <h2 class="fw-bold fs-3 mb-1">Visit Our Workshop</h2>
-      <p class="text-muted small">
-        Find our workshop and visit us for your custom statue requirements.
-      </p>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6">
-
-        <div class="location-card text-center">
-
-          <i class="bi bi-geo-alt-fill location-icon"></i>
-
-          <h5 class="fw-bold mt-2">Manorama Arts & Hastgiri</h5>
-
-          <!-- Clickable Address -->
-          <a
-            href="https://maps.app.goo.gl/SeMqSztAnnSPHgF39"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="address-link">
-
-            <p class="text-muted mb-3">
-              bypass chowk, Nagar Kalyan road, behind dream City,
-              Nepti, Ahilyanagar, Maharashtra 414001
             </p>
 
-          </a>
 
-          <!-- Google Maps Button -->
-          <a
-            href="https://maps.app.goo.gl/SeMqSztAnnSPHgF39"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-danger fw-bold px-4 py-2">
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
 
-            <i class="bi bi-map-fill me-2"></i>
-            Get Directions
 
-          </a>
+                <a href="https://wa.me/919284601010?text=Hello%2C%20I%20want%20a%20custom%20statue."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-success btn-lg fw-bold">
+
+                    <i class="bi bi-whatsapp me-2"></i>
+                    WhatsApp Enquiry
+
+                </a>
+
+
+                <a href="tel:+919284601010"
+                   class="btn btn-light btn-lg fw-bold">
+
+                    <i class="bi bi-telephone-fill me-2"></i>
+                    Call Workshop
+
+                </a>
+
+
+            </div>
 
         </div>
 
-      </div>
-    </div>
+    </header>
 
-  </div>
-</section>
 
-  <!-- Contact Banner -->
-  <section class="bg-dark text-white py-4 text-center">
-    <div class="container">
 
-      <h4 class="fw-bold mb-2">Want a Price Estimate?</h4>
+    <!-- ==============================
+         HIGHLIGHTS
+    ============================== -->
 
-      <p class="text-light small mb-3">
-        Send your reference image, statue dimensions and requirements.
-      </p>
+    <section class="highlight-strip">
 
-      <div class="d-flex justify-content-center gap-2 flex-wrap">
+        <div class="container">
 
-        <a href="https://wa.me/9284601010?text=Hello%2C%20I%20want%20a%20price%20estimate%20for%20a%20custom%20statue."
-           class="btn btn-success fw-bold px-3 py-2"
-           target="_blank"
-           rel="noopener noreferrer">
+            <div class="row g-2">
 
-          <i class="bi bi-whatsapp me-1"></i> WhatsApp Enquiry
-        </a>
+                <div class="col-4">
 
-        <a href="tel:+919284601010"
-           class="btn btn-warning fw-bold px-3 py-2">
+                    <i class="bi bi-brush"></i>
+                    <div class="small">Custom Designs</div>
 
-          <i class="bi bi-telephone-fill me-1"></i> Call Workshop
-        </a>
+                </div>
 
-      </div>
-    </div>
-  </section>
 
-  <!-- Sticky Bottom Bar for Mobile -->
-  <div class="action-bar bg-dark p-2 border-top border-secondary">
-    <div class="container">
+                <div class="col-4">
 
-      <div class="row g-2">
+                    <i class="bi bi-palette"></i>
+                    <div class="small">Artistic Finishing</div>
 
-        <div class="col-6">
-          <a href="tel:+919284601010"
-             class="btn btn-warning w-100 fw-bold py-2">
+                </div>
 
-            <i class="bi bi-telephone-fill me-1"></i> Call Now
-          </a>
+
+                <div class="col-4">
+
+                    <i class="bi bi-truck"></i>
+                    <div class="small">Delivery Enquiry</div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="col-6">
-          <a href="https://wa.me/+919284601010?text=Hello%2C%20I%20have%20a%20statue%20enquiry."
-             class="btn btn-success w-100 fw-bold py-2"
-             target="_blank"
-             rel="noopener noreferrer">
+    </section>
 
-            <i class="bi bi-whatsapp me-1"></i> WhatsApp
-          </a>
+
+
+    <!-- ==============================
+         HOME PAGE GALLERY
+         ONLY 6 PHOTOS
+    ============================== -->
+
+    <section class="gallery-section" id="gallery">
+
+        <div class="container">
+
+
+            <div class="text-center mb-4">
+
+                <h2 class="gallery-title">
+
+                    Our Arts & Creations
+
+                </h2>
+
+
+                <p class="text-muted">
+
+                    Explore Our Latest Statue Designs
+
+                </p>
+
+            </div>
+
+
+
+            <div class="row g-3">
+
+
+                <!-- PHOTO 1 -->
+
+                <div class="col-6 col-md-4">
+
+                    <div class="card gallery-card">
+
+                        <img src="Ram.jpg"
+                             class="gallery-img"
+                             alt="Shri Ram"
+                             loading="lazy">
+
+                        <div class="card-body text-center">
+
+                            <strong>Shri Ram</strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 2 -->
+
+                <div class="col-6 col-md-4">
+
+                    <div class="card gallery-card">
+
+                        <img src="statue.jpg"
+                             class="gallery-img"
+                             alt="Statue"
+                             loading="lazy">
+
+                        <div class="card-body text-center">
+
+                            <strong>Statue</strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 3 -->
+
+                <div class="col-6 col-md-4">
+
+                    <div class="card gallery-card">
+
+                        <img src="maharaj.jpg"
+                             class="gallery-img"
+                             alt="Shankar Maharaj"
+                             loading="lazy">
+
+                        <div class="card-body text-center">
+
+                            <strong>Shankar Maharaj</strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 4 -->
+
+                <div class="col-6 col-md-4">
+
+                    <div class="card gallery-card">
+
+                        <img src="shivaji maharaj.jpg"
+                             class="gallery-img"
+                             alt="Chhatrapati Shivaji Maharaj"
+                             loading="lazy">
+
+                        <div class="card-body text-center">
+
+                            <strong>Chhatrapati Shivaji Maharaj</strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 5 -->
+
+                <div class="col-6 col-md-4">
+
+                    <div class="card gallery-card">
+
+                        <img src="Swami samarth.jpg"
+                             class="gallery-img"
+                             alt="Swami Samarth"
+                             loading="lazy">
+
+                        <div class="card-body text-center">
+
+                            <strong>Swami Samarth</strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 6 -->
+
+                <div class="col-6 col-md-4">
+
+                    <div class="card gallery-card">
+
+                        <img src="Mahadev.jpg"
+                             class="gallery-img"
+                             alt="Mahadev"
+                             loading="lazy">
+
+                        <div class="card-body text-center">
+
+                            <strong>Mahadev</strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- VIEW ALL BUTTON -->
+
+            <div class="text-center mt-4">
+
+                <button type="button"
+                        class="btn btn-dark view-all-btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#allPhotosModal">
+
+                    <i class="bi bi-images me-2"></i>
+
+                    View All Photos
+
+                </button>
+
+            </div>
+
+
         </div>
 
-      </div>
+    </section>
+
+
+
+    <!-- ==============================
+         ALL PHOTOS POPUP
+    ============================== -->
+
+    <div class="modal fade"
+         id="allPhotosModal"
+         tabindex="-1"
+         aria-labelledby="allPhotosTitle"
+         aria-hidden="true">
+
+
+        <div class="modal-dialog">
+
+
+            <div class="modal-content">
+
+
+                <!-- FIXED TOP HEADER -->
+
+                <div class="modal-header">
+
+
+                    <div>
+
+                        <h5 class="modal-title"
+                            id="allPhotosTitle">
+
+                            Our Arts & Creations
+
+                        </h5>
+
+
+                        <small class="text-muted">
+
+                            Explore All Our Creations
+
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- TOP RIGHT CLOSE BUTTON -->
+
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close">
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- SCROLLABLE PHOTO AREA -->
+
+                <div class="modal-body">
+
+
+                    <div class="row g-3">
+
+
+                        <!-- PHOTO 1 -->
+
+                        <div class="col-6 col-md-4">
+
+                            <img src="Ram.jpg"
+                                 class="gallery-img"
+                                 alt="Shri Ram"
+                                 loading="lazy">
+
+                            <p class="text-center fw-bold mt-2">
+
+                                Shri Ram
+
+                            </p>
+
+                        </div>
+                        
+
+
+
+                        <!-- PHOTO 2 -->
+
+                        <div class="col-6 col-md-4">
+
+                            <img src="statue.jpg"
+                                 class="gallery-img"
+                                 alt="Statue"
+                                 loading="lazy">
+
+                            <p class="text-center fw-bold mt-2">
+
+                                Statue
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- PHOTO 3 -->
+
+                        <div class="col-6 col-md-4">
+
+                            <img src="maharaj.jpg"
+                                 class="gallery-img"
+                                 alt="Shankar Maharaj"
+                                 loading="lazy">
+
+                            <p class="text-center fw-bold mt-2">
+
+                                Shankar Maharaj
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- PHOTO 4 -->
+
+                        <div class="col-6 col-md-4">
+
+                            <img src="shivaji maharaj.jpg"
+                                 class="gallery-img"
+                                 alt="Shivaji Maharaj"
+                                 loading="lazy">
+
+                            <p class="text-center fw-bold mt-2">
+
+                                Chhatrapati Shivaji Maharaj
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- PHOTO 5 -->
+
+                        <div class="col-6 col-md-4">
+
+                            <img src="Swami samarth.jpg"
+                                 class="gallery-img"
+                                 alt="Swami Samarth"
+                                 loading="lazy">
+
+                            <p class="text-center fw-bold mt-2">
+
+                                Swami Samarth
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- PHOTO 6 -->
+
+                        <div class="col-6 col-md-4">
+
+                            <img src="Mahadev.jpg"
+                                 class="gallery-img"
+                                 alt="Mahadev"
+                                 loading="lazy">
+
+                            <p class="text-center fw-bold mt-2">
+
+                                Mahadev
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- PHOTO 7 -->
+
+                        <div class="col-6 col-md-4">
+
+                            <img src="Nandi.jpg"
+                                 class="gallery-img"
+                                 alt="Nandi"
+                                 loading="lazy">
+
+                            <p class="text-center fw-bold mt-2">
+
+                                Nandi
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- PHOTO 8 -->
+
+                        <div class="col-6 col-md-4">
+
+                            <img src="Hanuman.jpg"
+                                 class="gallery-img"
+                                 alt="Lord Hanuman"
+                                 loading="lazy">
+
+                            <p class="text-center fw-bold mt-2">
+
+                                Lord Hanuman
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- FIXED BOTTOM FOOTER -->
+
+                <div class="modal-footer">
+
+
+                    <button type="button"
+                            class="btn btn-dark px-4"
+                            data-bs-dismiss="modal">
+
+                        <i class="bi bi-x-circle me-2"></i>
+
+                        Close
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
 
-  <!-- Workshop Address Configuration -->
-  <script>
 
-    // ======================================
-    // EDIT YOUR WORKSHOP ADDRESS HERE
-    // ======================================
 
-    const workshopAddress = "bypass chowk, Nagar Kalyan road, behind dream City, Nepti, Ahilyanagar, Maharashtra 414001";
+    <!-- ==============================
+         HOW TO ORDER
+    ============================== -->
 
-    // ======================================
-    // GOOGLE MAPS LINK GENERATION
-    // ======================================
+    <section class="order-section">
 
-    const encodedAddress = encodeURIComponent(workshopAddress);
+        <div class="container">
 
-    const googleMapsURL =
-      `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
 
-    // Display address
-    document.getElementById("workshopAddressDisplay").textContent =
-      workshopAddress;
+            <div class="text-center mb-4">
 
-    // Make address clickable
-    document.getElementById("workshopAddressLink").href =
-      googleMapsURL;
+                <h4 class="fw-bold">
 
-    // Set Google Maps directions button
-    document.getElementById("googleMapsButton").href =
-      googleMapsURL;
+                    How to Order
 
-  </script>
+                </h4>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            </div>
+
+
+
+            <div class="row g-3">
+
+
+                <div class="col-4">
+
+                    <div class="order-card text-center">
+
+                        <i class="bi bi-whatsapp text-success"></i>
+
+                        <p class="fw-bold small mt-2 mb-0">
+
+                            1. Share Photo
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-4">
+
+                    <div class="order-card text-center">
+
+                        <i class="bi bi-calculator-fill text-warning"></i>
+
+                        <p class="fw-bold small mt-2 mb-0">
+
+                            2. Get a Quote
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-4">
+
+                    <div class="order-card text-center">
+
+                        <i class="bi bi-box-seam-fill text-primary"></i>
+
+                        <p class="fw-bold small mt-2 mb-0">
+
+                            3. Build Your Art
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         WORKSHOP LOCATION
+    ============================== -->
+
+    <section class="location-section border-top">
+
+        <div class="container">
+
+
+            <div class="text-center mb-4">
+
+                <h2 class="fw-bold">
+
+                    Visit Our Workshop
+
+                </h2>
+
+                <p class="text-muted">
+
+                    Visit us for your custom statue requirements.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-md-8 col-lg-6">
+
+
+                    <div class="location-card">
+
+
+                        <i class="bi bi-geo-alt-fill location-icon"></i>
+
+
+                        <h5 class="fw-bold mt-3">
+
+                            Manorama Arts & Hastgiri
+
+                        </h5>
+
+
+
+                        <a href="https://maps.app.goo.gl/SeMqSztAnnSPHgF39"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="address-link">
+
+
+                            <p class="text-muted mt-3 mb-3">
+
+                                Bypass Chowk, Nagar Kalyan Road,
+                                Behind Dream City, Nepti,
+                                Ahilyanagar, Maharashtra 414001
+
+                            </p>
+
+
+                        </a>
+
+
+
+                        <a href="https://maps.app.goo.gl/SeMqSztAnnSPHgF39"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-danger fw-bold px-4">
+
+
+                            <i class="bi bi-map-fill me-2"></i>
+
+                            Get Directions
+
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         CONTACT SECTION
+    ============================== -->
+
+    <section class="contact-section">
+
+
+        <div class="container">
+
+
+            <h3 class="fw-bold mb-3">
+
+                Want a Price Estimate?
+
+            </h3>
+
+
+            <p class="text-light mb-4">
+
+                Send your reference image, dimensions and requirements.
+
+            </p>
+
+
+
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+
+
+                <a href="https://wa.me/919284601010?text=Hello%2C%20I%20want%20a%20price%20estimate%20for%20a%20custom%20statue."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-success fw-bold px-4">
+
+
+                    <i class="bi bi-whatsapp me-2"></i>
+
+                    WhatsApp Enquiry
+
+
+                </a>
+
+
+
+                <a href="tel:+919284601010"
+                   class="btn btn-warning fw-bold px-4">
+
+
+                    <i class="bi bi-telephone-fill me-2"></i>
+
+                    Call Workshop
+
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==============================
+         FLOATING WHATSAPP BUTTON
+    ============================== -->
+
+    <a href="https://wa.me/919284601010?text=Hello%2C%20I%20have%20a%20statue%20enquiry."
+       class="btn btn-success floating-whatsapp text-white"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="WhatsApp Us">
+
+
+        <i class="bi bi-whatsapp"></i>
+
+
+    </a>
+
+
+
+    <!-- ==============================
+         STICKY BOTTOM ACTION BAR
+    ============================== -->
+
+    <div class="action-bar">
+
+
+        <div class="container">
+
+
+            <div class="row g-2">
+
+
+                <div class="col-6">
+
+
+                    <a href="tel:+919284601010"
+                       class="btn btn-warning w-100 fw-bold">
+
+
+                        <i class="bi bi-telephone-fill me-1"></i>
+
+                        Call Now
+
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="col-6">
+
+
+                    <a href="https://wa.me/919284601010?text=Hello%2C%20I%20have%20a%20statue%20enquiry."
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn-success w-100 fw-bold">
+
+
+                        <i class="bi bi-whatsapp me-1"></i>
+
+                        WhatsApp
+
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==============================
+         BOOTSTRAP JAVASCRIPT
+    ============================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 
 </body>
+
 </html>
